@@ -2,7 +2,7 @@
 # Last updated: 2026-02-21
 
 ## Repositories
-- GitHub: (to be added after push)
+- GitHub: https://github.com/georgeschamma/ai-profit-leak-finder
 
 ## Backend (Supabase)
 - Project ID: knyrfjdirqywcipbgoou
@@ -14,9 +14,10 @@
 - RLS: enabled on both tables, service_role has full access
 
 ## Deployed Services (Railway)
-- Frontend: (to be added after deploy)
-  - Railway Project: ai-profit-leak-finder
-  - Service: web
+- Frontend: https://web-production-559d4.up.railway.app
+  - Railway Project ID: 0c8c2b4c-ba06-49a5-8566-c3c3f2d68d2b
+  - Service ID: f5f6d73e-a886-45fe-a983-7572ac3d290a
+  - Environment ID: 41cd71f3-1893-4e31-9e8c-e4926c7e4d90
 
 ## Environment Variables Required
 - ANTHROPIC_API_KEY          — Anthropic API key (claude-opus-4-6)
@@ -25,7 +26,7 @@
 - NEXT_PUBLIC_SUPABASE_URL   — same as SUPABASE_URL
 - NEXT_PUBLIC_SUPABASE_ANON_KEY — Supabase anon key
 - NEXT_PUBLIC_CALENDLY_URL   — Calendly booking page URL
-- NEXT_PUBLIC_APP_URL        — Production URL (set after Railway deploy)
+- NEXT_PUBLIC_APP_URL        — https://web-production-559d4.up.railway.app
 
 ## Notes
 - DB is Supabase PostgreSQL (migrated from SQLite on 2026-02-21)
