@@ -1,0 +1,35 @@
+# App Structure - AI Profit Leak Finder
+# Last updated: 2026-02-21
+
+## Repositories
+- GitHub: (to be added after push)
+
+## Backend (Supabase)
+- Project ID: knyrfjdirqywcipbgoou
+- Project URL: https://knyrfjdirqywcipbgoou.supabase.co
+- Region: East US (North Virginia)
+- Key tables:
+  - submissions (id, name, company, email, industry, answers_json, created_at)
+  - reports (id, submission_id, analysis_json, created_at)
+- RLS: enabled on both tables, service_role has full access
+
+## Deployed Services (Railway)
+- Frontend: (to be added after deploy)
+  - Railway Project: ai-profit-leak-finder
+  - Service: web
+
+## Environment Variables Required
+- ANTHROPIC_API_KEY          — Anthropic API key (claude-opus-4-6)
+- SUPABASE_URL               — https://knyrfjdirqywcipbgoou.supabase.co
+- SUPABASE_SERVICE_ROLE_KEY  — Supabase service role JWT
+- NEXT_PUBLIC_SUPABASE_URL   — same as SUPABASE_URL
+- NEXT_PUBLIC_SUPABASE_ANON_KEY — Supabase anon key
+- NEXT_PUBLIC_CALENDLY_URL   — Calendly booking page URL
+- NEXT_PUBLIC_APP_URL        — Production URL (set after Railway deploy)
+
+## Notes
+- DB is Supabase PostgreSQL (migrated from SQLite on 2026-02-21)
+- PDF generation uses @react-pdf/renderer (server-side only)
+- Multi-step form state persisted via Zustand in localStorage
+- API routes require nodejs runtime (not edge) for PDF + Supabase
+- Claude system prompt is in lib/claude.ts — tuned for SMB business language
